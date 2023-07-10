@@ -1,0 +1,161 @@
+
+.containerForm{
+    /* Display */
+    display: flex;
+
+    /* Properties */
+    flex-wrap: wrap;
+    
+    flex-direction: column;
+    align-items: center;
+}
+.tituloForm{
+    padding: 7px;
+    margin-top: 30px;
+    font-size: 2em;
+    color: white;
+}
+.inputNameForm, .inputEmailForm, .inputSubjectForm, .inputMessageForm{
+    width: 20em;
+    height: 3em;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: black;
+    border: rgba(114,50,242,1) 2px solid;
+    color: white;
+    padding: 5px;
+}
+
+.inputNameForm:focus, .inputEmailForm:focus, .inputSubjectForm:focus, .inputMessageForm:focus{
+    outline: none;
+    border: rgba(114,50,242,1) 3px solid;
+    box-shadow: 1px 1px 12px white;
+}
+
+.inputMessageForm{
+    position: absolute;
+    height: 10em;
+    margin-top: 280px;
+    
+}
+
+
+.errorInfo, #sendButtom{
+    display: flex;
+    margin-left: 60vw;
+    gap: 5px;    
+}
+
+.errorInfo{
+   position: absolute;
+    box-shadow: 1px 1px 10px rgba(114,50,242,1);
+    background: rgba(114,50,242,1);
+    color: white;
+    border-radius: 30px;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 180px;
+}
+#sendButtom:enabled{
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow: 1px 1px 20px rgba(114,50,242,1);
+    background: rgba(114,50,242,1);
+    color: white;
+    border: none;
+}
+#sendButtom:enabled:hover{
+    background: rgba(114,50,242,1);
+    cursor: pointer;
+}
+#sendButtom:enabled:active{
+    background: rgba(114,50,242,1);
+    cursor: pointer;
+    
+    
+}
+#sendButtom:disabled{
+    
+    padding: 10px;
+    border-radius: 30px;
+}
+
+/* --------- Si se mando el mensaje ----------------- */
+
+.mensajeEnviado{
+    /* Properties */
+    display: flex;
+    justify-content: center;
+    background-color: black;   
+    flex-direction: column;
+    /* Sizes */
+    height: 35em;
+}
+.primerMensaje{
+    /* Properties */
+    align-self: center;
+    text-align: center;
+    
+    color: white;
+    font-size: 2em;
+    transition: 1s;
+    animation: fadeIn 2s linear;
+}
+
+.segundoMensaje{
+    align-self: center;
+    text-align: center;
+    
+    color: white;
+    font-size: 2em;
+    
+    transition: 1s;
+    animation: fadeIn 2s linear;
+    
+}
+
+
+/* ----------------------------------------- */
+
+
+@media (max-width:800px){
+
+    .errorInfo, #sendButtom{
+        display: flex;
+        margin-left: 0;
+        margin-top: 16em;
+        gap: 0;  
+    }
+    .errorInfo{
+        position: absolute;
+         box-shadow: 1px 1px 10px rgba(114,50,242,1);
+         background: rgba(114,50,242,1);
+         color: white;
+         border-radius: 30px;
+         padding: 10px;
+         margin-bottom: 0;
+         margin-top: 26.5em;
+     }
+    
+    
+  }
+
+  
+/* Animaciones */
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
